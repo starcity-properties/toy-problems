@@ -1,10 +1,12 @@
 # toy-problems
 
-A Clojure library designed to ... well, that part is up to you.
+A collection of algorithm problems for our weekly Fun Friday sessions.
 
-## Usage
+## How it works
 
-FIXME
+Each Friday, a new directory containing the code for that week's problem will be pushed into this repo's `src/toy_problems` directory.
+
+Go into that problem, fire up a repl, and have fun!
 
 ## License
 
