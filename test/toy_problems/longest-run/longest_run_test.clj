@@ -23,6 +23,6 @@
     (is (= (longest-run "abbbccdddeee") [1 3]))))
 
 
-(deftest same-char
-  (testing "correctly handles an input of all the same char"
-    (is = (longest-run "aaaaaaaaaaaa")) [0 11] ))
+(deftest empty-input
+  (testing "doesn't barf at an empty input"
+    (is (= (longest-run "") [0 0]))))
