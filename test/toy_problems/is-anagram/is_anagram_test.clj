@@ -1,6 +1,6 @@
 (ns toy-problems.is-anagram.is-anagram-test
-  (:require [toy-problems.is-anagram.is-anagram :as sut]
-            [clojure.test :as t]))
+  (:require [toy-problems.is-anagram.is-anagram :refer :all]
+            [clojure.test :refer :all]))
 
 (deftest is-anagram?-test
   (testing "returns true for an anagram"
