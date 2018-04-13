@@ -26,5 +26,6 @@
 
 ;; time O(n)
 ;; space O(1)
-;; constant space achieved by building a map of character frequencies...
-;; linear time achieved by iterating over first string to build map, then count down until frequencies are 0
+;; linear time and constant space achieved by
+;; building a map of character frequencies
+;; are the two maps equal?
