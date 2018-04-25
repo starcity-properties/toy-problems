@@ -5,17 +5,15 @@
   [numbers]
   (when (not (empty? numbers))
     (vec (map-indexed (fn [idx _]
-                        (apply + (first (split-at (inc idx) numbers))))
-                  numbers))))
-
+                        (apply + (subvec numbers 0 (inc idx))))
+                      numbers))))
 
 (defn contiguous-sum
   [numbers]
-  (if (= 1 (count numbers))
+  (if (<= (count numbers) 1)
     (first numbers)
-    (loop [i   0
-           left numbers
+    (loop [left numbers
            sums #{}]
       (if (empty? left)
         (apply max sums)
-        (recur (inc i) (second (split-at i left)) (into sums (largest-sum left)))))))
+        (recur (vec (second (split-at 1 left))) (into sums (largest-sum left)))))))
