@@ -11,7 +11,7 @@
     (fn [[max-sum running-sum] n]
       (let [current-running-sum (max n (+ running-sum n))]
         [(max max-sum current-running-sum) current-running-sum]))
-    [0 0] numbers)))
+    [Integer/MIN_VALUE Integer/MIN_VALUE] numbers)))
 
 
 (contiguous-sum [1 2 3]) ;;=> 6
@@ -25,3 +25,7 @@
 (contiguous-sum [10 -11 11]) ;;=> 11
 
 (contiguous-sum [-10 -11 30]) ;;=> 30
+
+(contiguous-sum [10 -1 30]) ;;=> 39
+
+(contiguous-sum [-10 -100 -30]) ;;=> -10
