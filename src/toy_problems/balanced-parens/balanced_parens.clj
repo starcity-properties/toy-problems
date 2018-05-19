@@ -1,14 +1,19 @@
 (ns toy-problems.balanced-parens.balanced-parens)
 
 
+(def standard-of-balance {\) \( \} \{ \] \[})
+
+(def in-close-parens?
+  (partial get standard-of-balance))
+
+(def in-open-parens?
+  (partial get (clojure.set/map-invert standard-of-balance)))
+
+
 (defn balanced-parens
   [string]
   (empty?
    (reduce (fn [stack ch]
-             (let [standard-of-balance {\) \( \} \{ \] \[}
-                   in-close-parens?    (partial get standard-of-balance)
-                   in-open-parens?     (partial get (clojure.set/map-invert standard-of-balance))]
-
                (cond
                  (and (empty? stack)
                       (some? (in-close-parens? ch)))
@@ -21,7 +26,7 @@
                  (some? (in-open-parens? ch))
                  (conj stack ch)
 
-                 :else stack)))
+                 :else stack))
            []
            string)))
 
