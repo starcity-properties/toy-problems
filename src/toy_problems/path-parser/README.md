@@ -8,14 +8,14 @@ Parsing URL paths and providing programmatic access to the data embedded in a UR
 ## Part One
 
 ### Your Goal
-Write a function, `parse-path` that accepts *two strings**. The first string defines a URL *pattern*, in this syntax: `"/mypath/{id}/{other}"`. The second string is a *request url*, representing a user trying to access a URL that matches the *pattern*. The `parse-path` function should return a *map* in which the keys are the URL paramaters defined in the *pattern*, and their values are their corresponding portions of the *request url*. See the example usage below for clarification.
+Write a function, `parse-path` that accepts *two strings*. The first string defines a URL *pattern*, in this syntax: `"/mypath/{id}/{other}"`. The second string is a *request url*, representing a user trying to access a URL that matches the *pattern*. The `parse-path` function should return a *map* in which the keys are the URL paramaters defined in the *pattern*, and their values are their corresponding portions of the *request url*. See the example usage below for clarification.
 
 
 ### Example Usage
 ```clojure
 (parse-path "/mypath/{id}/{other}" "/mypath/123/whatever")
 ;;=> {:id    123
-       :other whatever}
+       :other "whatever"}
 
 
 (parse-path "/inbox/{project-id}/tasks/{task-id}" "/inbox/2345/tasks/4567")
