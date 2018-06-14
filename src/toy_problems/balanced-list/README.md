@@ -39,7 +39,7 @@ Write a function that accepts a vector of integers, and returns the index within
 ```clojure
 (balanced-index [2 8 12 5 3 2]) ;;=> 2
 (balanced-index [1 6 -3 21 7]) ;;=> nil
-(balanced-index [2 6 3 6 5]) ;;=> true
+(balanced-index [2 6 3 6 5]) ;;=> nil
 (balanced-index [1 1 1 1 1 1 15 6]) ;;=> 6
 ```
 
