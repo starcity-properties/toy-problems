@@ -17,5 +17,9 @@
   "Given a string of digits in a phone number, produce a list of words that could
   be spelled on a telephone keypad using those digits."
   [digits]
-  ;;TODO - your code here!
-  nil)
+  (letfn [(-combinations [s l]
+            (for [a s
+                  b l]
+              (str a b)))]
+    (reduce -combinations
+            (map #(digits->letters (str %) "-") digits))))
