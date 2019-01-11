@@ -13,6 +13,7 @@ For instance, `"2.5"` is not "two and a half" or "half way to version three", it
 You may assume the default revision number for each level of a version number to be 0. For example, version number 3.4 has a revision number of 3 and 4 for its first and second level revision number. Its third and fourth level revision number are both 0.
 
 ## Example Usage
+#### in Clojure:
 
 ```clojure
 (latest-version-number "0.1" "1.1") ;;=> "1.1"
@@ -23,6 +24,8 @@ You may assume the default revision number for each level of a version number to
 (latest-version-number "1.01" "1.001") ;;=> "1.01"
 (latest-version-number "1.01" "1.1") ;;=> "1.01"
 ```
+
+#### in JavaScript:
 
 ```javascript
 latestVersionNumber("0.1", "1.1"); // => "1.1"
