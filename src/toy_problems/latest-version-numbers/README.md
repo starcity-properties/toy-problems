@@ -37,6 +37,11 @@ latestVersionNumber("1.01", "1.001"); //=> "1.01"
 latestVersionNumber("1.01", "1.1"); //=> "1.01"
 ```
 
+## Advanced Content
+
+For an extra challenge, try extending your function to accept two **or more** version numbers and return the latest version number.
+
+
 ## Problem Solving Process
 Use these steps below to aid you in using the problem solving process.
 
