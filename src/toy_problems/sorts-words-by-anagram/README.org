@@ -1,0 +1,28 @@
+* organize words by anagram
+
+Given a word list, sort all the words so that each line, in
+alphabetical order, is a sorted alphabetical list of all the anagrams
+of the word.  No word should occur on more than one line, because all
+the words that are anagrams of other words are on one line.
+
+** Example
+
+   consider a very short word list:
+
+   #+BEGIN_SRC text
+     act
+     arm
+     cat
+     ram
+     horse
+     shore
+     tac
+   #+END_SRC
+
+   The resulting output should be:
+
+   #+BEGIN_SRC text
+     act cat tac
+     arm ram
+     horse shore
+   #+END_SRC
