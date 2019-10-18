@@ -9,16 +9,20 @@ the words that are anagrams of other words are on one line.
 
    consider a very short word list:
 
-   act
-   arm
-   cat
-   ram
-   horse
-   shore
-   tac
+   #+BEGIN_SRC text
+     act
+     arm
+     cat
+     ram
+     horse
+     shore
+     tac
+   #+END_SRC
 
    The resulting output should be:
 
-   act cat tac
-   arm ram
-   horse shore
+   #+BEGIN_SRC text
+     act cat tac
+     arm ram
+     horse shore
+   #+END_SRC
